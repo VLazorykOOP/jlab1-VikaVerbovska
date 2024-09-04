@@ -24,12 +24,12 @@ public class Main {
 
         // Створюємо результативний рядок
         StringBuilder result = new StringBuilder();
-        for (String word : words) {
-            if (word.length() != maxLength || word.matches("\\p{Punct}")) {
+        for (String word : words) { //Розпочинаємо новий цикл для перебору всіх слів.
+            if (word.length() != maxLength || word.matches("\\p{Punct}")) { //Перевіряємо, чи довжина слова не дорівнює maxLength, або чи є слово розділовим знаком.
                 result.append(word);
             }
         }
 
-        return result.toString();
+        return result.toString(); //Повертаємо рядок, побудований з усіх слів, крім найдовших.
     }
 }
